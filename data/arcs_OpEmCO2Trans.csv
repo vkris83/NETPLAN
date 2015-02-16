@@ -1,0 +1,6 @@
+from,to,const,,,,,
+% Rail and truck (short ton / MM gallon used),,,,,,,
+XD,DD,14761,%,11100,14761,14761,
+% Biomass conversion facilities - credits - scenarios,,,,,,,
+BR,BO,0,% credits,"short ton/MM Gallon - fuel used for operation, but credit in feedstock production (plant and soil C sequestration)",,0,
+BO,DD,774.4,% credits (2358.5),,"short ton/MM Gallon - fuel used for operation, but credit in by-products",774.4,1310.26

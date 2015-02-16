@@ -1,0 +1,10 @@
+from,to,const,,,,,,
+% Vehicles (short ton / MM gallon used),,,,,,,,
+%GD,G,9700,%Add 3661 short ton/MM Gallon in bio-refinery operation and fuel production - LCA,,,,,
+XG,GD,13361,%,9700,13361,,,
+XJ,JD,14211,%,10550,14211,,,
+% Biomass conversion facilities - credits - scenarios,,,,,,,,
+BR,BO,0,% credits,"short ton/MM Gallon - fuel used for operation, but credit in feedstock production (plant and soil C sequestration)",,,,
+BO,GD,774.4,% credits (1393),,"short ton/MM Gallon - fuel used for operation, but credit in by-products",best case,774.4,1310.26
+% CNV emissions (short ton/MMCF),,,,,,,,
+NT,ND,65,,,,,,

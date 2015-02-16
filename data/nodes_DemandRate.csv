@@ -1,0 +1,7 @@
+code,const
+% Electrical demand (GW),
+EL,0.015
+% Natural gas demand,
+NT,0.01
+% Vehicles,
+VD,0.01

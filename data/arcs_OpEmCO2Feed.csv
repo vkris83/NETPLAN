@@ -1,0 +1,13 @@
+from,to,const,,,
+% Feedstock production and transportation (short ton/k-ton),,,,,
+CP,1T,87.48576657,,,
+CP,2T,169.4037816,,,
+CP,3T,108.8302237,,,
+CP,4T,110.8930917,,,
+CP,7T,311.95,"% best practise, add more for worst practises - land use, fertilizers (yield), transportation, drying… - scenarios",311.95,623.9
+CP,8T,233.9655757,"% best practise, add more for worst practises - forest clearing, transportation, drying… - scenarios",233.9655757,350.9483636
+CP,9T,-756.77,"% Add more for worst practises - transportation, drying… - scenarios",-756.77,605.42
+% Natural gas production (short ton/MMCF),,,,,
+NP,NT,21.71969352,,,
+% Oil production (short ton/MM gallon),,,,,
+XO,EO,2472.02,,,

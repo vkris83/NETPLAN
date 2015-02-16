@@ -1,0 +1,18 @@
+code,step
+CP,y % Coal production
+N,ym % Natural gas nodes
+ND,y
+1,y
+2,y
+3,y
+4,y
+5,y
+%passenger,
+6,y
+E,ym % Electricity nodes
+% Biomass,
+BP,y
+B,y
+7,y
+8,y
+9,y
