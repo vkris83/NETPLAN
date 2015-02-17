@@ -1,0 +1,8 @@
+from,to,const  % M$/PCE-mile - multiply by distance and eff to get M$/vehicle
+%% Highway,,
+gg,,0.00E+00
+cc,,0.00E+00
+%% Air,,
+ff,,0.00E+00
+%% HSR,,
+ee,,0.00E+00

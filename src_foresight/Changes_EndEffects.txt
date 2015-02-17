@@ -1,0 +1,13 @@
+DC pf change (Feb 21 2013)
+- arc.cpp (bi-directional)
+- postprocess.cpp
+
+- add end effect options
+  Dual eq., primal eq., extended simulation, salvage 
+- changes to data
+  1. parameter.csv
+- changes to code
+  1. global.h
+  2. netscore.h (useEnd...)
+  3. read.cpp (read from parameter.csv)
+  4. preprocessor (salvage- depreciated inv.)

@@ -1,0 +1,5 @@
+from,to,const
+EC,EL,1
+EI,EL,1
+EW,EL,0.2
+ES,EL,0.15

@@ -1,0 +1,27 @@
+Dec-16 2011
+
+1. Changed all electric gen flows in GWh... Some Gens with high CF had capacity as flow... I changed InvertEff file...
+2. M$/Mgallon for XO-EO in OpCost.csv
+3. Transportation --> Capacity to Flow limit conversion using trips/vehicle per year
+
+Gen...
+
+1. Inv - GW ($/GW)
+2. OpMax- GWh (GW available * hours in simulation step * eff)
+3. Flow - GWh (Decision variable)
+4. GWh Flow affects $ and Emission ($/GWh... CO2/GWh)
+
+Transportation...
+
+1. Inv - vehicle ($/Vehcile) {1 vehicle = 1 trip of 1 mile}
+2. OpMax- Total trips per year of all vehicles (Vehicles * trips/vehicle in simulation step // directly "total trips per year")
+3. Flow - Total trips per year of all vehicles [Decision variable --> Flow * eff (occupancy factor) = demand served]
+4. vehicle specific Trip (not pssenger car equivalents) Flow affects $ and Emission ($/Vehicle-mile... CO2/vehicle-mile)
+    $/vehcile-mile * miles * Total trips (Flow variable)
+
+Item 2. for transportation pending!!! - DONE!
+
+- Check fleet inv limits?
+- Check fleet inv cost?
+- Connection to infrastructure to Fleet limits?
+- Inv cost for infra...?

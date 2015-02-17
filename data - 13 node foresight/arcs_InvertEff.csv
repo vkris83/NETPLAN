@@ -1,0 +1,39 @@
+from,to,const
+% Renewables,,
+EV,EL,Y
+EU,EL,Y
+EW,EL,Y
+EY,EL,Y
+E2,EL,Y
+E3,EL,Y
+EN,EL,Y
+EC,EL,Y
+ED,EL,Y
+EG,EL,Y
+ET,EL,Y
+EH,EL,Y
+EO,EL,Y
+EP,EL,Y
+E1,EL,Y
+E4,EL,Y
+E5,EL,Y
+E6,EL,Y
+% VEHICLES (Disable number hours),,
+% Gg,VD,1
+% Gh,VD,1
+% Transportation,,
+tt,,1
+rr,,1
+hh,,1
+kk,,1
+ee,,1
+ff,,1
+aa,,1
+gg,,1
+cc,,1
+% Biomass,,
+EM,EL,Y
+ES,EL,Y
+EA,EL,Y
+ER,EL,Y
+BR,BO,Y
