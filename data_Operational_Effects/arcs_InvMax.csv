@@ -1,0 +1,17 @@
+from,to,const
+% Electric generation (GW/year),,
+EC,EL,2
+ED,EL,2
+EW,EL,1.5
+EY,EL,1.5
+EV,EL,1.5
+EU,EL,1.5
+EN,EL,1
+EO,EL,2
+EP,EL,2
+EH,EL,0
+EG,EL,3
+ET,EL,4
+E2,EL,1
+E3,EL,1
+E1,EL,1.5

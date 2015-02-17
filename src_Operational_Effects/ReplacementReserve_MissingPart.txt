@@ -1,0 +1,65 @@
+//    2011-2014 (c) Venkat Krishnan (VK)
+// July 4th - OP INV
+string Arc::ArcSRColumns() const {
+    string temp_output = "";
+    // If ramp rate is allowed, write the appropriate cost - Spinning Reserve - 10 min. Load Following
+    if ( Get("RampRate") != "0" ) {
+        temp_output += "    SR_" + Get("Code") + " obj " + ToString<double>(GetDouble("OpCost")/3)+ "\n"; // Estimate only 1/3rd allocated reserve (3*sigma) flows
+        temp_output += "    SR_" + Get("Code") + " ubR" + Get("Code") + " 1\n"; 
+	  temp_output += "    SR_" + Get("Code") + " RSR" + Get("To") + Get("ToStep") + " " + Get("Eff") + "\n";
+	  temp_output += "    SR_" + Get("Code") + " U1SR" + Get("Code") + " " + Get("Eff") + "\n"; //Upper Bound by Ramp rates - Cap*rr
+	  temp_output += "    SR_" + Get("Code") + " U2SR" + Get("Code") + " " + Get("Eff") + "\n"; //Upper Bound by Ramp rates - Cap
+
+        // Aug 10 2011 - Cycling
+       /* if ( Get("Cycles") != "0" ) 
+	  temp_output += "    SR_" + Get("Code") + " CySR" + Get("Code") + " -" + ToString<double>(GetDouble("Cycles")*GetDouble("CyclesCost")*CycleReg*2/3)+ "\n";*/
+
+	 // May 31 - fuel consumption affected by Reserve - Venkat Krishnan ; XN---EN---EL
+	  temp_output += "    SR_" + Get("Code") + " " + Get("From") + Get("FromStep") + " -0.33333\n"; // EN--EL (add to XN)
+
+	 // Sustainability metrics // May 31
+	  for (int j = 0; j < (int)SustMet.size(); ++j){
+	 	if ( Get("Op" + SustMet[j]) != "0" ){
+				/*if ( j==0 && Get("Cycles") != "0" )  // Aug 11 - Cycle
+					temp_output += "    SR_" + Get("Code") + " " + SustMet[j] + GetYear() + " " + ToString<double>(GetDouble("Op" + SustMet[j])/3*(1+GetDouble("Cycles")*(CycleReg*2)*CycleCO2/100)) + "\n";
+				else*/
+					temp_output += "    SR_" + Get("Code") + " " + SustMet[j] + GetYear() + " " + ToString<double>(GetDouble("Op"+SustMet[j])/3) + "\n";
+		}
+	  }
+    }
+    return temp_output;
+}
+
+
+// July 4th - OP INV
+/*string Arc::ArcRRColumns() const {
+    string temp_output = "";
+    // If ramp rate is allowed, write the appropriate cost - Replacement Reserve for CR in 30 mins.
+    if ( Get("RampRate") != "0" ) {
+        temp_output += "    RR_" + Get("Code") + " obj " + ToString<double>(GetDouble("OpCost")/2)+ "\n"; // Estimate only 1/3rd allocated reserve (3*sigma) flows
+        temp_output += "    RR_" + Get("Code") + " ubR" + Get("Code") + " 1\n"; 
+	  temp_output += "    RR_" + Get("Code") + " RRR" + Get("To") + Get("ToStep") + " " + Get("Eff") + "\n";
+	  temp_output += "    RR_" + Get("Code") + " U1RR" + Get("Code") + " " + Get("Eff") + "\n"; //Upper Bound by Ramp rates - Cap*rr
+	  temp_output += "    RR_" + Get("Code") + " U2RR" + Get("Code") + " " + Get("Eff") + "\n"; //Upper Bound by Ramp rates - Cap
+
+        // Aug 10 2011 - Cycling
+        /*if ( Get("Cycles") != "0" ) 
+	  temp_output += "    RR_" + Get("Code") + " CyRR" + Get("Code") + " -" + ToString<double>(GetDouble("Cycles")*GetDouble("CyclesCost")*CycleReg*6/2)+ "\n";*/
+
+	 // May 31 - fuel consumption affected by Reserve - Venkat Krishnan ; XN---EN---EL
+	  temp_output += "    RR_" + Get("Code") + " " + Get("From") + Get("FromStep") + " -0.5\n"; // EN--EL (add to XN)
+
+	 // Sustainability metrics // May 31
+	  for (int j = 0; j < (int)SustMet.size(); ++j){		
+	 	if ( Get("Op" + SustMet[j]) != "0" ){
+				/*if ( j==0 && Get("Cycles") != "0" )  // Aug 11 - Cycle
+					temp_output += "    RR_" + Get("Code") + " " + SustMet[j] + GetYear() + " " + ToString<double>(GetDouble("Op" + SustMet[j])/2*(1+GetDouble("Cycles")*(CycleReg*6)*CycleCO2/100)) + "\n";
+				else*/
+					temp_output += "    RR_" + Get("Code") + " " + SustMet[j] + GetYear() + " " + ToString<double>(GetDouble("Op"+SustMet[j])/2) + "\n";
+		}
+	  }
+    }
+    return temp_output;
+}*/
+
+before "string Arc::ArcCyEColumns() const {"

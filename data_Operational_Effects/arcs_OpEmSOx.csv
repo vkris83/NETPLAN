@@ -1,0 +1,14 @@
+from,to,const
+% Coal generators (short ton per K-short-ton of coal),,
+1T,EC,0.7387095
+2T,EC,2.645999
+3T,EC,1.402296
+4T,EC,0.843047
+1T,ED,0.5408856
+2T,ED,1.936504
+3T,ED,1.026681
+4T,ED,0.6151739
+% Petroleum generation,,0
+EO,EL,21.07517336
+% Nuclear,,0
+EN,EL,0.341356825

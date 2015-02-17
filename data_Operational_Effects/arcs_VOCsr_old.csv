@@ -1,0 +1,16 @@
+from,to,const %VOC spinning reserve M$/GW-hr (50% for SR)
+EC,E,0.000175
+ED,E,0.00015
+EG,E,0.000125
+ET,E,0.00005
+EN,E,0
+EH,E,0.00005
+EW,E,0
+EY,E,0
+EO,E,0.00015
+EP,E,0.00015
+EV,E,0
+EU,E,0
+E1,E,0
+E3,E,0
+E2,E,0

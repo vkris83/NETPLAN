@@ -1,0 +1,16 @@
+from,to,const %Heat rate degradation regulation
+EC,E,0.4
+ED,E,0.35
+EG,E,0.25
+ET,E,0.05
+EN,E,0
+EH,E,0.05
+EW,E,0
+EY,E,0
+EO,E,0.3
+EP,E,0.35
+EV,E,0
+EU,E,0
+E1,E,0
+E3,E,0
+E2,E,0

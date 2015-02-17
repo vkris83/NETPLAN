@@ -1,0 +1,16 @@
+from,to,const %average GWh for yearly FOR; 1 is dummy to avoid divide by 0!
+EC,E,2000
+ED,E,900
+EG,E,250
+ET,E,13
+EN,E,7600
+EH,E,210
+EW,E,1
+EY,E,1
+EO,E,250
+EP,E,900
+EV,E,1
+EU,E,1
+E1,E,275
+E3,E,1
+E2,E,1
